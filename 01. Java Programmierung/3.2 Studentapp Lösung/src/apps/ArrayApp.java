@@ -48,12 +48,12 @@ public class ArrayApp {
 		printIntegerValues(array2);
 		printIntegerValues(array9);
 		System.out.println("Array9: " + array9 + "\nArray2: " + array2);
- 
+
  
 		//Test der Methoden aus Übung 5.1
 		System.out.println("\n\nÜbung 5.1:\n");
-		System.out.println(getSum(1,2,3,4,5));
-		System.out.println(getMean(1,2,3,4,5));	
+		System.out.println(getSum1(1,2,3,4,5));
+		System.out.println(getMean1(1,2,3,4,5));	
 		
 		
 		// Test der Methoden aus Hausübung 5.2
@@ -129,7 +129,24 @@ public class ArrayApp {
 	private static int getLastValue(int... values) {
 		return values[values.length-1];
 	}
-	
+	//Aufgabe 5.1
+    private static int getSum1(int... summands) {
+        int temp = 0;
+        for (int i = 0; i < summands.length; i++) {
+            temp += summands[i]; 
+        }
+        System.out.print("Die Summe ist: ");
+        return temp;
+    }
+    private static double getMean1(int... numbers) {
+        double temp = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            temp += numbers[i];
+        }
+        System.out.print("Der Durchschnitt ist: ");
+        return temp / numbers.length;
+    }
+
 	
 	//Lösung von Übung 5.1
 	private static int getSum(int... summands) {
