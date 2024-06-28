@@ -49,7 +49,21 @@ public class ArrayApp {
 		printIntegerValues(array9);
 		System.out.println("Array9: " + array9 + "\nArray2: " + array2);
  
- 
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
 		//Test der Methoden aus Übung 5.1
 		System.out.println("\n\nÜbung 5.1:\n");
 		System.out.println(getSum(1,2,3,4,5));
@@ -84,7 +98,33 @@ public class ArrayApp {
 		System.out.println("testSym2 ist symmetrisch? " + testSym2);	
 		
 	} // end of main
-	
+    
+    /* Übung 5.1: ArrayApp
+    private static int getSum1(int[] summands) {
+        int sum = 0;
+        for(int j = 0; j < summands.length; j++){
+            sum += summands[j];  
+        } 
+        return sum;
+    }
+    private static double getMean1(int[] numbers) {
+        double sum = 0;
+        for(int j = 0; j < numbers.length; j++){
+            sum += numbers[j];  
+        } 
+        sum = sum / numbers.length;
+        return sum;
+    }
+    */
+    public static int[] getReverse1 (int[] array) {
+        
+    }
+    
+
+
+
+
+
 	private static int[] getArray(int size) {
 		return new int[size];
 	}
@@ -196,7 +236,5 @@ public class ArrayApp {
 		return testb;
 		//kürzere Alternative:
 		//return (max(entrysEqual)==true && min(entrysEqual==true) ? true:false;
-		
 	}
-		
 }
