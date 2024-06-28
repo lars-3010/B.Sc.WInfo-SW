@@ -117,7 +117,7 @@ public class ArrayApp {
     }
     */
     public static int[] getReverse1 (int[] array) {
-        reverse = 0;
+        
     }
     
 
