@@ -1,1 +1,1 @@
-# B.Sc.WInfo-1
+# B.Sc.WInfo-SW
