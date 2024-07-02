@@ -2,7 +2,6 @@ package utilities;
 
 import java.io.*;
 import java.util.*;
-import utilities.Console;
 
 /**
  * <code>Console</code> provides a set of methods to support ease of console reading
