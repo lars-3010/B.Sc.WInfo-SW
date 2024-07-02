@@ -32,3 +32,5 @@ hs_err_pid*
 # Build directories
 target/
 build/
+
+.DS_Store
