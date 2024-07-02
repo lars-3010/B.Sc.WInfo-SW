@@ -1,6 +1,8 @@
 package apps;
 
-import model.Subject;
+import model.Location;
+import model.Student;
+import model.StudentCollection;
 
 public class StudentCollectionApp {
 

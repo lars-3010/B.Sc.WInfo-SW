@@ -1,6 +1,6 @@
 package model;
 
-ppublic class StudentCollection {
+public class StudentCollection {
 	private Student[] students;
 	
 	public StudentCollection() {
