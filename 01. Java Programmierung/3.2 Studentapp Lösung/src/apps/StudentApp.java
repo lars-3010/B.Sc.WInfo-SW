@@ -3,6 +3,7 @@ package apps;
 import model.Location;
 import model.Student;
 import utilities.IdFactory;
+import model.Subject;
 
 /**
  * This is the class "StudentApp" which uses the class Student
@@ -28,7 +29,8 @@ public static void main(String[] args) {
 	
 	    Student student3 = new Student("Anne Müller", 
 	    								new Location("Meisenstr. 92", 33333, "Bielefeld"), 
-	    								new Location("Finkenstr. 9", 44444, "Gütersloh")
+	    								new Location("Finkenstr. 9", 44444, "Gütersloh"), 
+										Subject.APPLIED_INFORMATIONS
 	    				   );
 	    
 	    System.out.println(student3);
