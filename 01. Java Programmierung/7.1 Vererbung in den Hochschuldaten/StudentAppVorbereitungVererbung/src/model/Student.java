@@ -1,79 +1,60 @@
 package model;
 
+import model.*;
+
 //Implementation of StudentApp, Übung 1.11
 //Katrin Witting (basierend auf einem Konzept von Peter Ruckmann)
 
-//Top-level-Klasse Student
-public class Student {
+
+public class Student extends Person{
 	
 	//Instanzvariablen von Student
 	private int id;
-	private String name;
-	private Location placeOfBirth;
-	private Location residence;
+
 	private Subject subject;
 	
 	//Konstruktoren von Student
 	
-	public Student(String name, Location placeOfBirth) {
-		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
-	}
+	// Remove the duplicate constructor
 	
 	public Student(String firstName, String lastName, Location placeOfBirth) {
+		super(firstName + " " + lastName, placeOfBirth, placeOfBirth);
 		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
 	}
 	
 	public Student(String name, Location placeOfBirth, Location residence) {
+		super(name, placeOfBirth, residence);
 		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
     }
 	
 	public Student(String firstName, String lastName, Location placeOfBirth, Location residence) {
+		super(firstName + " " + lastName, placeOfBirth, residence);
 		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
     }
 	
 	//Konstruktoren, erweitert um Subject
 	
 	public Student(String name, Location placeOfBirth, Subject subject) {
+		super(name, placeOfBirth, placeOfBirth);
 		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
 		this.subject = subject;
 	}
 	
 	public Student(String firstName, String lastName, Location placeOfBirth, Subject subject) {
+		super(firstName + " " + lastName, placeOfBirth, placeOfBirth);
 		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
 		this.subject = subject;
 	}
 	
 	public Student(String name, Location placeOfBirth, Location residence, Subject subject) {
+		super(name, placeOfBirth, residence);
 		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
 		this.subject = subject;
     }
 	
 	public Student(String firstName, String lastName, Location placeOfBirth, Location residence, Subject subject) {
+		super(firstName + " " + lastName, placeOfBirth, residence);
 		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
 		this.subject = subject;
     }
 	
@@ -86,33 +67,6 @@ public class Student {
 	
 	private void setId(int id) {
 		this.id = id;
-	}
-		
-	public String getName() {
-		return this.name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setName(String firstName, String lastName) {
-		this.name = firstName + " " + lastName;
-	}
-	
-	public Location getPlaceOfBirth() {
-		return placeOfBirth;
-	}
-	
-	public void setPlaceOfBirth(Location placeOfBirth) {
-		this.placeOfBirth = placeOfBirth;
-	}
-	
-	public Location getResidence() {
-		return residence;
-	}
-	
-	public void setResidence(Location residence) {
-		this.residence = residence;
 	}
 	
 	public Subject getSubject() {
@@ -127,16 +81,15 @@ public class Student {
 	// Override toString(), with subject
 	public String toString() {
 		if (this.subject != null) {
-			return this.name + " (" + this.id + "), \n  born at " + this.placeOfBirth + 
-					", \n  lives at " + this.residence + "\n  and studies " + this.subject;
+			return super.toString()	+ "\n with the id (" + this.id + ")" +  "\n  and studies " + this.subject;
 		}
 		else {
-			return this.name + " (" + this.id + "), \n  born at " + this.placeOfBirth + 
-					",\n  lives at " + this.residence;
+			return super.toString()	+ "\n with the id (" + this.id + ")" +  "\n  and studies nothing";
 		}
 	}
 
 	
 }
+
 
 
