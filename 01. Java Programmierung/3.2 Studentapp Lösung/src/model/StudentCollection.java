@@ -1,5 +1,5 @@
 package model;
-import utilities.IdFactory;
+import model.IdFactory;
 
 public class StudentCollection {
     private Student[] students;

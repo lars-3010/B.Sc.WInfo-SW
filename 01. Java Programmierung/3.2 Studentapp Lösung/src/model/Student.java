@@ -1,6 +1,6 @@
 package model;
 
-import utilities.IdFactory;
+import model.IdFactory;
 
 /**
  * This is the class "Student"

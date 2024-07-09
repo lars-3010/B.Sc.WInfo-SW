@@ -1,4 +1,4 @@
-package utilities;
+package model;
 
 public class IdFactory {
 	public static final int FIRST_ID = 10001;

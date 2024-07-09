@@ -2,7 +2,7 @@ package apps;
 
 import model.Location;
 import model.Student;
-import utilities.IdFactory;
+import model.IdFactory;
 import model.Subject;
 
 /**
