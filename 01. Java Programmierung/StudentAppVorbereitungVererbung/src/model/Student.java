@@ -1,10 +1,5 @@
 package model;
-
-//Implementation of StudentApp, Übung 1.11
-//Katrin Witting (basierend auf einem Konzept von Peter Ruckmann)
-
-//Top-level-Klasse Student
-public class Student {
+public class Student extends Person{
 	
 	//Instanzvariablen von Student
 	private int id;
@@ -16,67 +11,14 @@ public class Student {
 	//Konstruktoren von Student
 	
 	public Student(String name, Location placeOfBirth) {
-		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
-	}
-	
-	public Student(String firstName, String lastName, Location placeOfBirth) {
-		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
-	}
-	
-	public Student(String name, Location placeOfBirth, Location residence) {
-		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
+        super(name, placeOfBirth); // Aufruf des Konstruktors der Superklasse
+        this.id = model.IdFactory.getNextId();
     }
-	
-	public Student(String firstName, String lastName, Location placeOfBirth, Location residence) {
-		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
+
+    public Student(String firstName, String lastName, Location placeOfBirth) {
+        super(firstName + " " + lastName, placeOfBirth); // Aufruf des Konstruktors der Superklasse
+        this.id = model.IdFactory.getNextId();
     }
-	
-	//Konstruktoren, erweitert um Subject
-	
-	public Student(String name, Location placeOfBirth, Subject subject) {
-		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
-		this.subject = subject;
-	}
-	
-	public Student(String firstName, String lastName, Location placeOfBirth, Subject subject) {
-		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = placeOfBirth;
-		this.subject = subject;
-	}
-	
-	public Student(String name, Location placeOfBirth, Location residence, Subject subject) {
-		this.id = model.IdFactory.getNextId();
-		this.name = name;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
-		this.subject = subject;
-    }
-	
-	public Student(String firstName, String lastName, Location placeOfBirth, Location residence, Subject subject) {
-		this.id = model.IdFactory.getNextId();
-		this.name = firstName + " " + lastName;
-		this.placeOfBirth = placeOfBirth;
-		this.residence = residence;
-		this.subject = subject;
-    }
-	
 	
 	// Instanzmethoden von Student:
 	
@@ -86,33 +28,6 @@ public class Student {
 	
 	private void setId(int id) {
 		this.id = id;
-	}
-		
-	public String getName() {
-		return this.name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setName(String firstName, String lastName) {
-		this.name = firstName + " " + lastName;
-	}
-	
-	public Location getPlaceOfBirth() {
-		return placeOfBirth;
-	}
-	
-	public void setPlaceOfBirth(Location placeOfBirth) {
-		this.placeOfBirth = placeOfBirth;
-	}
-	
-	public Location getResidence() {
-		return residence;
-	}
-	
-	public void setResidence(Location residence) {
-		this.residence = residence;
 	}
 	
 	public Subject getSubject() {

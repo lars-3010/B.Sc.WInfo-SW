@@ -2,16 +2,8 @@ package apps;
 
 import model.*;
 
-/**
- * Little app for working with student data.
- * @author K. Witting, idea by P. Ruckmann
- * 
- */
 public class StudentApp {
-	/**
-	 * Main program that uses the class Student
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 		// Examples for our methods of class Student
 	    
