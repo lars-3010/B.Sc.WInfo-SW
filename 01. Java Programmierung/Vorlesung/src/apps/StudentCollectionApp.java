@@ -7,7 +7,7 @@ public class StudentCollectionApp {
 		StudentCollection collection = new StudentCollection();
 		System.out.println(collection + "\n\n");
 		
-		collection.add(new Student("Bruno Harms", new Location("Geburtsstr. 1", 38875, "Sorge"), new Location("Schlaue Str. 42", 38875, "Elend")));
+		collection.add(new Student("Bruno Harms", new Location("Geburtsstr. 1", 38875, "Sorge"), new Location("Schlaue Str. 42", 38875, "Elend"), Subject.BUSINESS_INFORMATICS));
 	
 		Student student = new Student("Julia Bach", new Location("Geburtsstr. 2", 38875, "Sorge"), new Location("Schlaue Str. 314", 38875, "Elend"));
 		collection.add(student);

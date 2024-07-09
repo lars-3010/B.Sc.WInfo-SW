@@ -1,4 +1,5 @@
 package apps;
+
 import utilities.Console; 
 
 public class IntegerDemo {

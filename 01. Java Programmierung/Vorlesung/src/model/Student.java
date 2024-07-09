@@ -1,13 +1,5 @@
 package model;
 
-import utilities.IdFactory;
-
-/**
- * This is the class "Student"
- * @author Katrin W.
- *
- **/
-
 public class Student {
 	
 	//Instanzvariablen
@@ -15,6 +7,7 @@ public class Student {
 	private String name;
 	private Location placeOfBirth;
 	private Location residence;
+	private Subject subject;
 	
 	//Konstruktoren
 	public Student(){
@@ -34,6 +27,14 @@ public class Student {
 		this.residence = residence;
 	}
 	
+	public Student(String name, Location placeOfBirth, Location residence, Subject subject){
+		this.id = IdFactory.getNextId();
+		this.name = name;
+		this.placeOfBirth = placeOfBirth;
+		this.residence = residence;
+		this.subject = subject;
+	}
+	
 	// Getter and setter
 	public int getId() {
 		return id;
@@ -51,9 +52,19 @@ public class Student {
 		this.name = firstName + " " + lastName;
 	}
 	
+	public Subject getSubject() {
+		return subject;
+	}
+	
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+	
 	@Override
 	public String toString() {
 		//return "Student [id=" + id + ", name=" + name + "]";
-		return "Student " + name + " hat die Id " + id + ",\n wurde geboren in " + placeOfBirth + "\n und wohnt jetzt in " + residence;
+		return "Student " + name + " hat die Id " + id + ",\n wurde geboren in " 
+				+ placeOfBirth + "\n und wohnt jetzt in " + residence 
+				+ "\n und studiert " + subject;
 	}
 }

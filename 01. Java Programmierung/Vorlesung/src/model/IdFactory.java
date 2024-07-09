@@ -19,4 +19,3 @@ public class IdFactory {
 		  return nextId-FIRST_ID;	
 	}
 }
-

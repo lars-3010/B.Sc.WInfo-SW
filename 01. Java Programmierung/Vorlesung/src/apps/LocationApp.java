@@ -1,4 +1,5 @@
 package apps;
+
 import model.Location;
 
 public class LocationApp {
