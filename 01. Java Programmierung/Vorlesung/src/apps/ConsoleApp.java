@@ -1,7 +1,7 @@
 package apps;
 
-import utilities.*;
 import model.*;
+import utilities.*;
 
 public class ConsoleApp {
 
