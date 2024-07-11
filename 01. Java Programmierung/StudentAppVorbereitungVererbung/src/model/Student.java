@@ -1,23 +1,23 @@
 package model;
+
 public class Student extends Person{
 	
 	//Instanzvariablen von Student
 	private int id;
-	private String name;
-	private Location placeOfBirth;
-	private Location residence;
 	private Subject subject;
 	
 	//Konstruktoren von Student
 	
-	public Student(String name, Location placeOfBirth) {
+	public Student(String name, Location placeOfBirth, Location residence, Subject subject) {
         super(name, placeOfBirth); // Aufruf des Konstruktors der Superklasse
         this.id = model.IdFactory.getNextId();
+		this.subject = subject;
     }
 
-    public Student(String firstName, String lastName, Location placeOfBirth) {
-        super(firstName + " " + lastName, placeOfBirth); // Aufruf des Konstruktors der Superklasse
+    public Student(String firstName, String lastName, Location placeOfBirth, Location residence, Subject subject) {
+        super(firstName + " " + lastName, placeOfBirth); // Aufruf des Konstruktors der Superklasse mit LastName
         this.id = model.IdFactory.getNextId();
+		this.subject = subject;
     }
 	
 	// Instanzmethoden von Student:
@@ -38,17 +38,11 @@ public class Student extends Person{
         this.subject = subject;
     }
 
-	
 	// Override toString(), with subject
 	public String toString() {
-		if (this.subject != null) {
-			return this.name + " (" + this.id + "), \n  born at " + this.placeOfBirth + 
-					", \n  lives at " + this.residence + "\n  and studies " + this.subject;
-		}
-		else {
-			return this.name + " (" + this.id + "), \n  born at " + this.placeOfBirth + 
-					",\n  lives at " + this.residence;
-		}
+		return super.toString()
+			+ ", has id " + this.id
+			+ ", studies " + this.subject;
 	}
 
 	
