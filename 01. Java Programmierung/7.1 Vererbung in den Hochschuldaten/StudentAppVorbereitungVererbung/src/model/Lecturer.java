@@ -1,6 +1,6 @@
 package model;
 
-public class Lecturer extends Person{
+public final class Lecturer extends Person{
 	private Faculty faculty;
 	private Role role;
 	
@@ -24,6 +24,10 @@ public class Lecturer extends Person{
 
 	public void setRole(Role role) {
 		this.role = role;
+	}
+
+	public String getTypeName() {
+		return "Lecturer";
 	}
 	
 	public String toString() {

@@ -1,6 +1,6 @@
 package model;
 
-public class Person {
+public abstract class Person {
     //Instanzvariablen von Person
     private String name;
     private Location placeOfBirth;
@@ -18,24 +18,24 @@ public class Person {
     }
 
     //getter
-    public getName() {
+    public String getName() {
         return this.name;
     }
-    public getPlaceOfBirth() {
+    public Location getPlaceOfBirth() {
         return this.placeOfBirth;
     }
-    public getResidence() {
+    public Location getResidence() {
         return this.residence;
     }
 
     //setter
-    public setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    public setPlaceOfBirth(Location placeOfBirth) {
+    public void setPlaceOfBirth(Location placeOfBirth) {
         this.placeOfBirth = placeOfBirth;
     }
-    public setResidence(Location residence) {
+    public void setResidence(Location residence) {
         this.residence = residence;
     }
 
@@ -43,4 +43,6 @@ public class Person {
     public String toString() {
         return "Name: " + this.name + "\n Place of Birth: " + this.placeOfBirth + "\n Residence: " + this.residence;
     }
+
+    public abstract String getTypeName();
 }

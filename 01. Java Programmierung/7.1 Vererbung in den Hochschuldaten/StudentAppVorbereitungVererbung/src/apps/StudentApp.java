@@ -13,7 +13,7 @@ public class StudentApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Examples for our methods of class Student
+		// Examples for our methods of class Student;
 	    
 		Student student1 = new Student("Anne","Müller",
 				                     new Location("Bachstr. 3", 33178, "Borchen"),

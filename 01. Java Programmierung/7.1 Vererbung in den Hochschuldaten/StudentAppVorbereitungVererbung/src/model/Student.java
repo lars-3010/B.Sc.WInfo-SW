@@ -6,7 +6,7 @@ import model.*;
 //Katrin Witting (basierend auf einem Konzept von Peter Ruckmann)
 
 
-public class Student extends Person{
+public final class Student extends Person{
 	
 	//Instanzvariablen von Student
 	private int id;
@@ -88,6 +88,9 @@ public class Student extends Person{
 		}
 	}
 
+	public String getTypeName() {
+		return "Student";
+	}
 	
 }
 
