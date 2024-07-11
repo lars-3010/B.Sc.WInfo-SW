@@ -19,17 +19,17 @@ public class Student {
 	private Subject degree;
 	
 	//Konstruktoren
-	public Student(){
+	public Student()throws IdRangeException{
 		//empty constructor
 		this.id = IdFactory.getNextId();
 	}
 	
-	public Student(String name){
+	public Student(String name)throws IdRangeException{
 		this.id = IdFactory.getNextId();
 		this.name = name;
 	}
 	
-	public Student(String name, Location placeOfBirth, Location residence, Subject subject){
+	public Student(String name, Location placeOfBirth, Location residence, Subject subject)throws IdRangeException{
 		this.id = IdFactory.getNextId();
 		this.name = name;
 		this.placeOfBirth = placeOfBirth;
