@@ -3,6 +3,7 @@ package apps;
 import model.Location;
 import model.Student;
 import model.IdFactory;
+import model.IdRangeException;
 import model.Subject;
 
 /**
@@ -12,7 +13,7 @@ import model.Subject;
  */
 public class StudentApp {
 
-public static void main(String[] args) {
+public static void main(String[] args) throws IdRangeException {
 		Student student1 = new Student();
 		Student student2 = new Student();
 		
